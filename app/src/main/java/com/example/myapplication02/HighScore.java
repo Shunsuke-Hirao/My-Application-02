@@ -3,7 +3,6 @@ package com.example.myapplication02;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,36 +10,41 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class HighScore extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView title;
-
-    //the youtube about tutorial part 2 from 6:40
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_high_score);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        title=findViewById(R.id.title);
-
-//        Button start=findViewById(R.id.start);
-        ((Button)findViewById(R.id.start)).setOnClickListener(this);
-        ((Button)findViewById(R.id.score)).setOnClickListener(this);
+        ((Button)findViewById(R.id.button)).setOnClickListener(this);
+        ((Button)findViewById(R.id.button2)).setOnClickListener(this);
+        ((Button)findViewById(R.id.button3)).setOnClickListener(this);
+        ((Button)findViewById(R.id.button4)).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view){
-        int id = view.getId(); // Get the ID of the clicked view
-        if (id == R.id.start) {
-            title.setText("Hello world");
-        } else if (id == R.id.score) {
-            title.setText("High Score Clicked");
+        switch (view.getId()){
+            case(R.id.button):
+                break;
+
+            case (R.id.button2):
+                break;
+
+            case(R.id.button3):
+                break;
+
+            case (R.id.button4):
+                break;
+
         }
+
     }
 }
