@@ -1,5 +1,6 @@
 package com.example.myapplication02;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,19 +32,19 @@ public class HighScore extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View view){
-        switch (view.getId()){
-            case(R.id.button):
-                break;
+        int id=view.getId();
+        if(id==R.id.button){
 
-            case (R.id.button2):
-                break;
+        }
+        else if(id==R.id.button2){
 
-            case(R.id.button3):
-                break;
+        }
+        else if(id==R.id.button3){
 
-            case (R.id.button4):
-                break;
-
+        }
+        else if(id==R.id.button4){
+            Intent intenthome=new Intent(getApplication(), MainActivity.class);
+            startActivity(intenthome);
         }
 
     }

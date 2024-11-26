@@ -1,5 +1,6 @@
 package com.example.myapplication02;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView title;
 
-    //the youtube about tutorial part 2 from 6:40
+    //the youtube about tutorial part 2 from 23:53
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view){
         int id = view.getId(); // Get the ID of the clicked view
         if (id == R.id.start) {
-            title.setText("Hello world");
+            Intent intentlevel = new Intent(getApplication(), GameLevel.class);
+            startActivity(intentlevel);
         } else if (id == R.id.score) {
-            title.setText("High Score Clicked");
+            Intent intentscore =new Intent(getApplication(), HighScore.class);
+            startActivity(intentscore);
         }
     }
 }
