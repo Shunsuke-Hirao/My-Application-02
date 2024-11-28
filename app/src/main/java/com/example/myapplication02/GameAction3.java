@@ -28,6 +28,8 @@ public class GameAction3 extends AppCompatActivity implements View.OnClickListen
     private Button b8;
     private Button b9;
 
+    private int count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class GameAction3 extends AppCompatActivity implements View.OnClickListen
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        count=1;
 
         b1=findViewById(R.id.num1);
         b1.setOnClickListener(this);
@@ -90,38 +94,68 @@ public class GameAction3 extends AppCompatActivity implements View.OnClickListen
     public void onClick(View view){
         int id=view.getId();
         if(id==R.id.num1){
+            if(b1.getText().toString().equals(""+count)){
+                b1.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
 
         }
         else if(id==R.id.num2){
-
+            if(b2.getText().toString().equals(""+count)){
+                b2.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num3){
+            if(b3.getText().toString().equals(""+count)){
+                b3.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
 
         }
         else if(id==R.id.num4){
-
+            if(b4.getText().toString().equals(""+count)){
+                b4.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num5){
-
+            if(b5.getText().toString().equals(""+count)){
+                b5.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num6){
-
+            if(b6.getText().toString().equals(""+count)){
+                b6.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num7){
-
+            if(b7.getText().toString().equals(""+count)){
+                b7.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num8){
-
+            if(b8.getText().toString().equals(""+count)){
+                b8.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.num9){
-
+            if(b9.getText().toString().equals(""+count)){
+                b9.setVisibility(View.INVISIBLE);
+                count+=1;
+            }
         }
         else if(id==R.id.buttonHome){
             Intent intenthome=new Intent(getApplication(), MainActivity.class);
             startActivity(intenthome);
         }
         else if(id==R.id.buttonRetry){
-
+            Intent intentretry=new Intent(getApplication(), GameAction3.class);
+            startActivity(intentretry);
         }
 
     }
